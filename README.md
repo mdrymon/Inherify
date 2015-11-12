@@ -19,6 +19,7 @@ var People = Inherify.factory({
   construct : 'People'
 });
 
+// Dérived class
 var Customer = Inherify.factory({
   element : {
     init : function (name, firstname) {
