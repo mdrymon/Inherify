@@ -1,5 +1,4 @@
 var Inherify = (function () {
-var Inherify = (function () {
   return {
     factory : function (options) {
       if (typeof options !== 'object') throw new Error('Options must be an object');
