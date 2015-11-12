@@ -38,4 +38,4 @@ var Customer = Inherify.factory({
 ```
 ### Benchmark
 
-[[http://jsperf.com/inherify-bench]]
+http://jsperf.com/inherify-bench
