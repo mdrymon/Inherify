@@ -5,7 +5,7 @@ A simple alternative to the existing inheritance client side
 
 `[[Inherify]].factory( options )`
 
-#### Example
+### Example
 
 ```javascript
 // Base class
@@ -36,3 +36,6 @@ var Customer = Inherify.factory({
   extend : 'People'
 });
 ```
+### Benchmark
+
+[[http://jsperf.com/inherify-bench]]
