@@ -20,7 +20,7 @@ var People = Inherify.factory({
 });
 
 // Dérived class
-var Customer = Inherify.factory({
+var firstCustomer = Inherify.factory({
   element : {
     init : function (name, firstname) {
       this.firstname = firstname;
