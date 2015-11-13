@@ -1,5 +1,5 @@
-var Inherify = (function () {
-  return {
+(function () {
+  Inherify = {
     factory : function (options) {
       if (typeof options !== 'object') throw new Error('Options must be an object');
       if (options.element && typeof options.element !== 'object') throw new Error('Options.element must be an object');
@@ -15,11 +15,18 @@ var Inherify = (function () {
           (typeof options.element.init === 'function') && options.element.init.apply(this, options.params);
         }
       }
-      options.extend && (typeof window[options.extend] === 'function') && (window[options.construct].prototype = new window[options.extend]());
+      if (options.extend && (typeof window[options.extend] === 'function')) {
+        this.parents[options.extend] = window[options.extend].prototype;
+        window[options.construct].prototype = new window[options.extend]();
+      }
       for (var proto in options.prototypes) window[options.construct].prototype[proto] = options.prototypes[proto];
       window[options.construct].prototype.constructor = window[options.construct];
       var instance = new window[options.construct]();
       return instance;
+    },
+    parents : {},
+    base : function (extend) {
+      return this.parents[extend];
     }
   }
 })();
