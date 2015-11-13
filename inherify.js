@@ -10,7 +10,7 @@
       options.construct = options.construct || 'Inherify_BClass';
       window[options.construct] = function () {
         if (options.element) {
-          (Object.prototype.toString.call(arg) === '[object Array]') && (options.params = []);
+          (Object.prototype.toString.call(options.params) === '[object Array]') && (options.params = []);
           for (var prop in options.element) (prop !== 'init') && (this[prop] = options.element[prop]);
           (typeof options.element.init === 'function') && options.element.init.apply(this, options.params);
         }
