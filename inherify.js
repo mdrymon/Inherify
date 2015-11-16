@@ -1,3 +1,8 @@
+//     Inherify.js
+//     @author: Mickael Drymon
+//
+//     Copyright (c) 2015 mdrymon.
+//     The MIT License (MIT)
 (function () {
   Inherify = {
     factory : function (options) {
