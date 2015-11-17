@@ -5,11 +5,21 @@ A simple alternative to the existing inheritance client side
 
 `[[Inherify]].factory( options )`
 
+- options : (object)
+  - element : A instance layer (object)
+    - init : The constructor access (function)
+    - [prop] ...
+    - [methods] ...
+  - params : The parameters for the instance built (array)
+  - prototypes : Alter the base class prototype (object)
+  - construct : The class name (string)
+  - extend : The parent class name (string)
+
 ### Example
 
 ```javascript
-// Base class
-var People = Inherify.factory({
+// "Abstract" class pattern (note: no eleement has been defined)
+Inherify.factory({
   prototypes : {
     name : null,
     setName : function(name) {
@@ -38,4 +48,4 @@ var firstCustomer = Inherify.factory({
 ```
 ### Benchmark
 
-http://jsperf.com/inherify-bench/2
+http://jsperf.com/inherify-bench/3
