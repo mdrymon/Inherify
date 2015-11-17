@@ -33,7 +33,7 @@
         (prop !== 'constructor') && prototypes.hasOwnProperty(prop) &&
         (_constructor.prototype[prop] = prototypes[prop]);
       _constructor.prototype.constructor = _constructor;
-      return new _constructor(element, params);
+      if (element) return new _constructor(element, params);
     },
     base : function (extend) {
       return _global[extend].prototype;
