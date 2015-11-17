@@ -23,7 +23,7 @@
 
       var _constructor = _global[_construct] = function (element, params) {
         if (element) {
-          (Object.prototype.toString.call(params) === '[object Array]') && (params = []);
+          (Object.prototype.toString.call(params) !== '[object Array]') && (params = []);
           for (prop in element) element.hasOwnProperty(prop) && (prop !== 'init') && (this[prop] = element[prop]);
           (typeof element.init === 'function') && element.init.apply(this, params);
         }
