@@ -48,4 +48,4 @@ var firstCustomer = Inherify.factory({
 ```
 ### Benchmark
 
-http://jsperf.com/inherify-bench/3
+http://jsperf.com/inherify-bench/4
