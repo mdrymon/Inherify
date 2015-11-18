@@ -38,7 +38,7 @@ var firstCustomer = Inherify.factory({
       console.log('new customer');
     },
     setFirstname : function (firstname) {
-      this.firstname && (this.firstname = firstname);
+      firstname && (this.firstname = firstname);
     }
   },
   params:["John", "Doe"],
